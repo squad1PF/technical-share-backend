@@ -1,16 +1,20 @@
 import { Router }  from 'express';
+import { v4 as uuidV4 } from 'uuid';
 
 const usersRoutes = Router();
 
 const users = [];
 
-usersRoutes.post("/users", (request, response) => {
+usersRoutes.post("/", (request, response) => {
   const { name, email } = request.body;
 
-  users.push({
+  const user = {
     name,
-    email
-  });
+    email,
+    id: uuidV4(),
+  }
+
+  users.push(user);
 
   return response.status(201).send();
 });
