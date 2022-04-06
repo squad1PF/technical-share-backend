@@ -1,20 +1,14 @@
 import { Router }  from 'express';
-import { v4 as uuidV4 } from 'uuid';
+
+import { UsersRepository } from '../repositories/UsersRepository'
 
 const usersRoutes = Router();
-
-const users = [];
+const usersRepository = new UsersRepository();
 
 usersRoutes.post("/", (request, response) => {
   const { name, email } = request.body;
 
-  const user = {
-    name,
-    email,
-    id: uuidV4(),
-  }
-
-  users.push(user);
+  usersRepository.create({ name, email });
 
   return response.status(201).send();
 });
