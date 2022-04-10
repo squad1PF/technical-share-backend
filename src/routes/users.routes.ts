@@ -1,16 +1,16 @@
-import { Router }  from 'express';
+import { Router } from 'express'
 
-import { UsersRepository } from '../repositories/UsersRepository'
+import { UsersRepositories } from '../repositories/UsersRepositories'
 
-const usersRoutes = Router();
-const usersRepository = new UsersRepository();
+const usersRoutes = Router()
+const usersRepository = new UsersRepositories()
 
-usersRoutes.post("/", (request, response) => {
-  const { name, email } = request.body;
+usersRoutes.post('/', (request, response) => {
+  const { name, email } = request.body
 
-  usersRepository.create({ name, email });
+  usersRepository.create({ name, email })
 
-  return response.status(201).send();
-});
+  return response.status(201).send()
+})
 
 export { usersRoutes }
