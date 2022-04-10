@@ -1,16 +1,10 @@
 import { Router }  from 'express';
-
-import { UsersRepository } from '../repositories/UsersRepository'
+import { CreateUserController } from '../controllers/CreateUserController';
 
 const usersRoutes = Router();
-const usersRepository = new UsersRepository();
 
-usersRoutes.post("/", (request, response) => {
-  const { name, email } = request.body;
+const createUserController = new CreateUserController();
 
-  usersRepository.create({ name, email });
-
-  return response.status(201).send();
-});
+usersRoutes.post("/", createUserController.handle);
 
 export { usersRoutes }
