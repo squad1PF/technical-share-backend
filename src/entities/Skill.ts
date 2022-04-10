@@ -1,8 +1,8 @@
 import { v4 as uuidV4 } from 'uuid'
-import { Entity, PrimaryColumn, Column, CreateDateColumn } from 'typeorm'
+import { Entity, PrimaryColumn, Column } from 'typeorm'
 
-@Entity('users')
-class User {
+@Entity('skill')
+class Skill {
   @PrimaryColumn()
   id?: string
 
@@ -10,10 +10,7 @@ class User {
   name: string
 
   @Column()
-  email: string
-
-  @CreateDateColumn()
-  created_at: Date
+  level: number
 
   constructor() {
     if (!this.id) {
@@ -22,4 +19,4 @@ class User {
   }
 }
 
-export { User }
+export { Skill }
