@@ -1,5 +1,5 @@
 import { v4 as uuidV4 } from 'uuid'
-import { Entity, PrimaryColumn, Column, CreateDateColumn } from 'typeorm'
+import { Entity, PrimaryColumn, Column } from 'typeorm'
 
 @Entity('skill')
 class Skill {
