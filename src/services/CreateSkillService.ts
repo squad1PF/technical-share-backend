@@ -15,7 +15,7 @@ class CreateSkillService {
     })
 
     if (skillAlreadyExists) {
-      throw new Error('User already exists')
+      throw new Error('Skill already exists')
     }
 
     const skill = skillRepository.create({
