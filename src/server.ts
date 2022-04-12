@@ -11,4 +11,4 @@ app.use(express.json())
 app.use('/users', usersRoutes)
 app.use('/skills', skillsRoutes)
 
-app.listen(3333, () => console.log('Server is running!'))
+app.listen(process.env.PORT || 3333, () => console.log('Server is running!'))
