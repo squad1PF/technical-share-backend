@@ -13,13 +13,13 @@ export class CreateSkill1649610956376 implements MigrationInterface {
           },
           {
             name: 'name',
-            type: 'varchar',
+            type: 'varchar'
           },
           {
             name: 'created_at',
             type: 'timestamp',
             default: 'now()'
-          },
+          }
         ]
       })
     )

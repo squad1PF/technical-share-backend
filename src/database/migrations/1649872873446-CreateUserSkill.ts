@@ -1,4 +1,4 @@
-import {MigrationInterface, QueryRunner,  Table } from "typeorm";
+import { MigrationInterface, QueryRunner, Table } from 'typeorm'
 
 export class CreateUserSkill1649872873446 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
@@ -13,16 +13,16 @@ export class CreateUserSkill1649872873446 implements MigrationInterface {
           },
           {
             name: 'id_user',
-            type: 'uuid',
+            type: 'uuid'
           },
           {
             name: 'id_skill',
-            type: 'uuid',
+            type: 'uuid'
           },
           {
             name: 'level',
-            type: 'integer',
-          },
+            type: 'integer'
+          }
         ],
         foreignKeys: [
           {
@@ -40,7 +40,7 @@ export class CreateUserSkill1649872873446 implements MigrationInterface {
             columnNames: ['id_skill'],
             onDelete: 'SET NULL',
             onUpdate: 'SET NULL'
-          },
+          }
         ]
       })
     )
