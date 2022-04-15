@@ -40,7 +40,7 @@ export class CreateMentorships1649967366336 implements MigrationInterface {
             onUpdate: 'SET NULL'
           },
           {
-            name: 'FKSkill',
+            name: 'FKMentored',
             referencedTableName: 'users',
             referencedColumnNames: ['id'],
             columnNames: ['id_mentored'],
