@@ -3,11 +3,10 @@ import { SkillRepositories } from '../repositories/SkillsRepositories'
 
 interface ISkillRequest {
   name: string
-  level: number
 }
 
 class CreateSkillService {
-  async execute({ name, level }: ISkillRequest) {
+  async execute({ name }: ISkillRequest) {
     const skillRepository = getCustomRepository(SkillRepositories)
 
     const skillAlreadyExists = await skillRepository.findOne({
@@ -19,8 +18,7 @@ class CreateSkillService {
     }
 
     const skill = skillRepository.create({
-      name,
-      level
+      name
     })
 
     await skillRepository.save(skill)
