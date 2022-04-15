@@ -1,4 +1,4 @@
-modulo.exports = {
+module.exports = {
   "type": "postgres",
   "url": process.env.DATABASE_URL,
   "migrations": ["./src/database/migrations/*.ts"],
