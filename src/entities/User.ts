@@ -12,6 +12,15 @@ class User {
   @Column()
   email: string
 
+  @Column()
+  password: string
+
+  @Column()
+  role: string
+
+  @Column()
+  seniority: string
+
   @CreateDateColumn()
   created_at: Date
 
