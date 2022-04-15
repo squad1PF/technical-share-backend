@@ -4,6 +4,7 @@
   "description": "Projeto desenvolvido durante o hackaton do Programa de Formação do Grupo FCamara",
   "main": "index.js",
   "scripts": {
+    "start": "node dist/server.js",
     "dev": "ts-node-dev src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli"

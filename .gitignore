@@ -1,5 +1,2 @@
-#Ignorando Modules
-
 *node_modules
-*.env
 *.lock

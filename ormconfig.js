@@ -1,10 +1,6 @@
-{
+modulo.exports = {
   "type": "postgres",
-  "port": 5432,
-  "host": "localhost",
-  "username": "",
-  "password": "",
-  "database": "technical-share",
+  "url": process.env.DATABASE_URL,
   "migrations": ["./src/database/migrations/*.ts"],
   "entities": ["src/entities/*.ts"],
   "cli": {

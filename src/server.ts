@@ -1,4 +1,5 @@
 import express from 'express'
+import dotenv from 'dotenv'
 import { usersRoutes } from './routes/users.routes'
 import { skillsRoutes } from './routes/skills.routes'
 import { mentorshipsRoutes } from './routes/mentorships.routes'
@@ -6,6 +7,8 @@ import { mentorshipsRoutes } from './routes/mentorships.routes'
 import './database'
 
 const app = express()
+
+dotenv.config()
 
 app.use(express.json())
 
