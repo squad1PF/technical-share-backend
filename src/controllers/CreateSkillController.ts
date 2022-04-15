@@ -3,11 +3,11 @@ import { CreateSkillService } from '../services/CreateSkillService'
 
 class CreateSkillController {
   async handle(request: Request, response: Response) {
-    const { name, level } = request.body
+    const { name } = request.body
 
     const createSkillService = new CreateSkillService()
 
-    const skill = await createSkillService.execute({ name, level })
+    const skill = await createSkillService.execute({ name })
 
     return response.json(skill)
   }

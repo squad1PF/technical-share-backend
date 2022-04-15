@@ -1,7 +1,7 @@
 import { v4 as uuidV4 } from 'uuid'
-import { Entity, PrimaryColumn, Column } from 'typeorm'
+import { Entity, PrimaryColumn, Column, CreateDateColumn } from 'typeorm'
 
-@Entity('skill')
+@Entity('skills')
 class Skill {
   @PrimaryColumn()
   id?: string
@@ -9,8 +9,8 @@ class Skill {
   @Column()
   name: string
 
-  @Column()
-  level: number
+  @CreateDateColumn()
+  created_at: Date
 
   constructor() {
     if (!this.id) {
