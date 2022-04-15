@@ -5,5 +5,11 @@ module.exports = {
   "entities": ["src/entities/*.ts"],
   "cli": {
     "migrationsDir": "./src/database/migrations"
+  },
+  "ssl": true,
+  "extra": {
+    "ssl": {
+      "rejectUnauthorized": false
+    }
   }
 }
