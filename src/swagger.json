@@ -1,0 +1,160 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Technical Share Documentation",
+    "description": "",
+    "version": "1.0.0",
+    "contact": {
+      "email": "eloisa.oliveirasantos@gmail.com"
+    }
+  },
+  "paths": {
+    "/users": {
+      "post": {
+        "tags": ["User"],
+        "summary": "Create a user",
+        "description": "Create a new user",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  },
+                  "role": {
+                    "type": "string"
+                  },
+                  "seniority": {
+                    "type": "string"
+                  }
+                },
+                "exemple": {
+                  "name": "User name sample",
+                  "email": "User email sample",
+                  "password": "User password sample",
+                  "role": "User role sample",
+                  "seniority": "User seniority sample"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": ["User"],
+        "summary": "List all users",
+        "description": "List all users",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "email": {
+                        "type":"string"
+                      },
+                      "password": {
+                        "type": "string"
+                      },
+                      "role": {
+                        "type":"string"
+                      },
+                      "seniority": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mentorships": {
+      "post": {
+        "tags": ["Mentorship"],
+        "summary": "Create a mentorship",
+        "description": "Create a new mentorship",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id_mentor": {
+                    "type": "string"
+                  },
+                  "id_mentored": {
+                    "type": "string"
+                  },
+                  "start_time": {
+                    "type": "Date"
+                  },
+                  "end_time": {
+                    "type": "Date"
+                  }
+                },
+                "exemple": {
+                  "id_mentor": "Mentorship id_mentor sample",
+                  "id_mentored": "Mentorship id_mentored sample",
+                  "start_time": "Mentorship start_time sample",
+                  "end_time": "Mentorship end_time sample"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": ["Mentorship"],
+        "summary": "List all mentorships",
+        "description": "List all mentorships",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id_mentor": {
+                        "type": "string"
+                      },
+                      "id_mentored": {
+                        "type":"string"
+                      },
+                      "start_time": {
+                        "type": "Date"
+                      },
+                      "end_time": {
+                        "type":"Date"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
